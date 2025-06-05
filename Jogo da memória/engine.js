@@ -19,14 +19,17 @@ const emojis = [
 // vetor para guardar as cartas
 let openCards = [];
 // Sortear as cartas
-let shuffleEmojis = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
+let emogiSorteado = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
 
 for (let i = 0; i < emojis.length; i++) {
     let box = document.createElement("div");
+    // a variável box pega as configurações da classe item lá do style
     box.className = "item";
-    box.innerHTML = shuffleEmojis[i];
+    // Guarda a posição do emoji
+    box.innerHTML = emogiSorteado[i];
     // Chama a função criada
     box.onclick = handleClick;
+    // Faz aparecer as caixinhas das figuras
     document.querySelector(".game").appendChild(box);
 }
 function handleClick() {

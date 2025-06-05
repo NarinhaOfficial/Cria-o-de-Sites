@@ -1,6 +1,8 @@
 body {
     display: flex;
+    /* Centraliza na vertical */
     justify-content: center;
+    /* Centraliza no meio (horizontal) */
     align-items: center;
     min-height: 100vh;
     background: #fc1e8a;
@@ -14,6 +16,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Entre os elementos */
     gap: 30px;
     background: linear-gradient(325deg, black 0%, purple 30%, pink 70%, white 100%);
     padding: 40px 60px;
@@ -26,6 +29,7 @@ h2 {
     letter-spacing: 0.1em;
 }
 
+/* Mechendo no botão */
 .reset {
     padding: 15px 20px;
     width: 100%;
@@ -33,28 +37,32 @@ h2 {
     background-color: white;
     border: none;
     font-size: 1.5em;
+    /* Espaço entre as letras */
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    /* Aparecer a mãozinha quando levar o mouse */
     cursor: pointer;
+    /* Deixa mais negrito */
     font-weight: 600;
 }
-
+/* Mudando a cor do botão ao ser clicado */
 .reset:focus {
     color: pink;
     background-color: black;
 }
-
+/* Definindo a classa game que está dentro do main */
 .game {
     /* border: qpx solid red; */
     width: 430px;
     height: 430px;
     display: flex;
+    /* Quando chegar no limite, fazer uma quebra de linha */
     flex-wrap: wrap;
     gap: 10px;
     transform-style: preserve-3d;
     perspective: 500px;
 }
-
+/* Criando as caixinhas onde as figurinhas vão ficar */
 .item {
     position: relative;
     width: 100px;
@@ -69,15 +77,18 @@ h2 {
     transform: rotateY(180deg);
     transition: 0.25s;
 }
-
+/* Cobrindo os emogis */
 .item::after {
     content: "";
     position: absolute;
+    /* Sobrepõe a cobertura sobre o emogi */
     inset: 0;
+    /* Cor da caixinha coberta */
     background: #404040;
     /* opacity: 0.85; */
     transition: 0.25s;
     transform: rotateY(0deg);
+    /* Mostra as cartas escondidas quando clicada */
     backface-visibility: hidden;
 }
 

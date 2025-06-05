@@ -38,18 +38,33 @@ main {
     border: 1px solid black;
     background-color: aquamarine;
 }
-.enemy{
+
+.enemy {
     background-color: red;
     /* Se colocar ../ mostra as pastas */
     background-image: url("../src/images/ralph.png");
     background-size: cover;
 }
-.menu-lives{
+
+.menu-lives {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.second{
+
+.second {
     /* margem entre os h2 de vermelho e de branco */
     margin-top: 10px;
+}
+
+.recarregar {
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+    background: black;
+    color: gold;
+    border: 5px solid aquamarine;
+    margin-top: 15px;
 }
